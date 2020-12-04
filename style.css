@@ -53,6 +53,7 @@ header
     justify-content: center;
     align-items: center;
     box-shadow: inset 0em 0.3em 5px #cfcfcf;
+    position: relative;
 }
 
 .locate-box p
@@ -60,6 +61,12 @@ header
     font-size: 1.25em;
     font-weight: 500;
     padding: 15px 0px;
+}
+
+.locate-box i
+{
+    position: absolute;
+    left: 25%;
 }
 
 /* title and description*/
@@ -88,7 +95,7 @@ header button
     background: linear-gradient(to bottom right, #FF79DA, #9356DC);
     color: white;
     font-weight: 700;
-
+    outline: none;
     margin-bottom: 40px;
 }
 
