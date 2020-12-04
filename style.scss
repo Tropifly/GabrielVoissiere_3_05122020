@@ -1,0 +1,110 @@
+/*reset of defaults style*/
+h1, h2, h3, h4, h5, h6, body, p
+{
+    margin: 0px;
+}
+
+/*variable*/
+$color-primaire : #9356DC;
+$color-secondaire : #FF79DA;
+$color-tertiaire : #99E2D0;
+$color-header : #f6f6f6;
+$shadow-color : #cfcfcf;
+$locate-color : #eaeaea;
+
+body
+{
+    width: 100vw;
+    height: auto;
+    font-family: 'Roboto', sans-serif;
+}
+
+/*header settings*/
+header
+{
+    width: 100%;
+    height: auto;
+    background-color: $color-header;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    /*button settings*/
+    button
+    {
+        width: 60%;
+        margin-top: 30px;
+        padding: 15px;
+        border: none;
+        border-radius: 100px;
+        background: linear-gradient(to bottom right, $color-secondaire, $color-primaire);
+        color: white;
+        font-weight: 700;
+        outline: none;
+        margin-bottom: 40px;
+    }
+}
+
+/*logo setting*/
+.logo-box
+{
+    width: 100%;
+    height: auto;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    .logo
+    {
+        padding: 15px 0px;
+    }
+}
+
+
+
+/*locate box settings*/
+.locate-box
+{
+    width: 100%;
+    height: auto;
+    background-color: $locate-color;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0em 0.3em 5px $shadow-color;
+    position: relative;
+
+    i
+    {
+        position: absolute;
+        left: 25%;
+    }
+
+    p
+    {
+        font-size: 1.25em;
+        font-weight: 500;
+        padding: 15px 0px;
+    }
+}
+
+/* title and description*/
+header h1
+{
+    margin-top: 30px;
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+header h2
+{
+    margin-top: 10px;
+    font-size: 1em;
+    font-weight: 300;
+}
+
