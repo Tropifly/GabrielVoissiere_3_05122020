@@ -48,7 +48,7 @@ header
 }
 
 /*logo setting*/
-.logo-box
+.logobox
 {
     width: 100%;
     height: auto;
@@ -58,7 +58,7 @@ header
     justify-content: center;
     align-items: center;
 
-    .logo
+    &-logo
     {
         padding: 15px 0px;
     }
@@ -67,7 +67,7 @@ header
 
 
 /*locate box settings*/
-.locate-box
+.locatebox
 {
     width: 100%;
     height: auto;
@@ -106,5 +106,74 @@ header h2
     margin-top: 10px;
     font-size: 1em;
     font-weight: 300;
+}
+
+.fonctionnement
+{
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    row-gap: 15px;
+
+    h3 
+    {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-left: 10%;
+    }
+
+    .carte
+    {
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        height: 60px;
+        width: 80%;
+        background-color: $color-header;
+        border-radius: 25px;
+        position: relative;
+
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        box-shadow: 0px 2px 8px $shadow-color;
+
+        &-chiffre
+        {
+            position: absolute;
+            left: -4%;
+            background-color: $color-primaire;
+            padding: 5px 10px;
+            border-radius: 100%;
+            color: white;
+        }
+
+        &-icon
+        {
+            grid-column-start: 2;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            font-size: 1.25em;
+            color: gray;
+
+            &--modifier
+            {
+                color: $color-primaire;
+            }
+        }
+
+        &-text 
+        {
+            grid-column-start: 3;
+            grid-column-end: 8;
+        }
+    }
+
+
 }
 

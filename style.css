@@ -47,7 +47,7 @@ header button {
 }
 
 /*logo setting*/
-.logo-box {
+.logobox {
   width: 100%;
   height: auto;
   background-color: white;
@@ -66,12 +66,12 @@ header button {
           align-items: center;
 }
 
-.logo-box .logo {
+.logobox-logo {
   padding: 15px 0px;
 }
 
 /*locate box settings*/
-.locate-box {
+.locatebox {
   width: 100%;
   height: auto;
   background-color: #eaeaea;
@@ -93,12 +93,12 @@ header button {
   position: relative;
 }
 
-.locate-box i {
+.locatebox i {
   position: absolute;
   left: 25%;
 }
 
-.locate-box p {
+.locatebox p {
   font-size: 1.25em;
   font-weight: 500;
   padding: 15px 0px;
@@ -115,5 +115,94 @@ header h2 {
   margin-top: 10px;
   font-size: 1em;
   font-weight: 300;
+}
+
+.fonctionnement {
+  width: 100%;
+  height: auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: (1fr)[4];
+      grid-template-rows: repeat(4, 1fr);
+  row-gap: 15px;
+}
+
+.fonctionnement h3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 10%;
+}
+
+.fonctionnement .carte {
+  margin-left: auto;
+  margin-right: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  height: 60px;
+  width: 80%;
+  background-color: #f6f6f6;
+  border-radius: 25px;
+  position: relative;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[7];
+      grid-template-columns: repeat(7, 1fr);
+  -webkit-box-shadow: 0px 2px 8px #cfcfcf;
+          box-shadow: 0px 2px 8px #cfcfcf;
+}
+
+.fonctionnement .carte-chiffre {
+  position: absolute;
+  left: -4%;
+  background-color: #9356DC;
+  padding: 5px 10px;
+  border-radius: 100%;
+  color: white;
+}
+
+.fonctionnement .carte-icon {
+  -ms-grid-column: 2;
+      grid-column-start: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  font-size: 1.25em;
+  color: gray;
+}
+
+.fonctionnement .carte-icon--modifier {
+  color: #9356DC;
+}
+
+.fonctionnement .carte-text {
+  -ms-grid-column: 3;
+      grid-column-start: 3;
+  grid-column-end: 8;
 }
 /*# sourceMappingURL=style.css.map */
