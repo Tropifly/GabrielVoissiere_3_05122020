@@ -3,7 +3,7 @@ h1, h2, h3, h4, h5, h6, body, p {
   margin: 0px;
 }
 
-/*variable*/
+/*importation des variables*/
 body {
   width: 100vw;
   height: auto;

@@ -4,13 +4,8 @@ h1, h2, h3, h4, h5, h6, body, p
     margin: 0px;
 }
 
-/*variable*/
-$color-primaire : #9356DC;
-$color-secondaire : #FF79DA;
-$color-tertiaire : #99E2D0;
-$color-header : #f6f6f6;
-$shadow-color : #cfcfcf;
-$locate-color : #eaeaea;
+/*importation des variables*/
+@import "variable";
 
 body
 {
