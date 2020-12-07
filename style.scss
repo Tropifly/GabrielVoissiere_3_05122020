@@ -256,3 +256,56 @@ header h2
     }
 }
 
+footer
+{
+    width: 100%;
+    height: auto;
+    background-color: $footer-color;
+    display: grid;
+    grid-template-rows: 80px 1fr 1fr 1fr 1fr 40px;
+    row-gap: 10px;
+    align-items: center;
+
+    a 
+    {
+        text-decoration: none;
+        color: white;
+        font-size: 1.2em;
+    }
+
+    i 
+    {
+        color: white;
+    }
+
+    img 
+    {
+        width: 35%;
+        height: auto;
+        filter: invert(100%);
+        margin-left: 20px;
+    }
+
+    &-block
+    {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .icon1
+    {
+        margin-right: 7px;
+        margin-left: 20px;
+    }
+
+    .icon2
+    {
+        margin-left: 20px;
+    }
+
+    .lien
+    {
+        margin-left: 20px;
+    }
+}
+
