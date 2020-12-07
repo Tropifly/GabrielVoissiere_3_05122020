@@ -124,7 +124,7 @@ header h2 {
   height: auto;
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: (1fr)[4];
+  -ms-grid-rows: 1fr 1fr 1fr 1fr;
       grid-template-rows: repeat(4, 1fr);
   row-gap: 15px;
 }
@@ -166,7 +166,7 @@ header h2 {
   position: relative;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[7];
+  -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
       grid-template-columns: repeat(7, 1fr);
   -webkit-box-shadow: 0px 2px 8px #cfcfcf;
           box-shadow: 0px 2px 8px #cfcfcf;
