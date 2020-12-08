@@ -14,6 +14,106 @@ body
     font-family: 'Roboto', sans-serif;
 }
 
+@keyframes spinner {
+
+    0%
+    {
+        transform: scale(0);
+        opacity: 0;
+        z-index: 2;
+    }
+
+    50%
+    {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    100%
+    {
+        transform: scale(0);
+        opacity: 0;
+        z-index: -999;
+    }
+}
+
+@keyframes fond-spinner
+{
+    0%
+    {
+        opacity: 1;
+        z-index: 1;
+    }
+
+    100%
+    {
+        opacity: 0;
+        z-index: -1;
+    }
+}
+
+.fond-spinner
+{
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+    animation: fond-spinner 800ms ease-in-out both;
+    animation-delay: 3100ms;
+    
+
+    .spinner
+    {
+        width: 50px;
+        height: 50px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        z-index: 2;
+
+        i 
+        {
+            width: 100%;
+            height: 100%;
+            grid-column-start: 1;
+            grid-row-start: 1;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            font-size: 50px;
+        }
+
+        .icon1
+        {
+            animation: spinner 1000ms ease-in-out both;
+            animation-delay: 0ms;
+            color: $color-primaire;
+        }
+
+        .icon2
+        {
+            animation: spinner 1000ms ease-in-out both;
+            animation-delay: 1000ms;
+            color: $color-secondaire;
+        }
+
+        .icon3
+        {
+            animation: spinner 1000ms ease-in-out both;
+            animation-delay: 2000ms;
+            color: $color-primaire;
+        }
+    }
+}
+
 /*header settings*/
 header
 {
@@ -39,6 +139,12 @@ header
         font-weight: 700;
         outline: none;
         margin-bottom: 40px;
+        transition: 300ms ease-in-out;
+
+        &:hover
+        {
+           filter: brightness(1.2);
+        }
     }
 }
 
@@ -238,13 +344,49 @@ header h2
             font-size: 1.25em;
         }
 
-        i 
+        div
         {
+            width: 30px;
+            height:24px;
             position: absolute;
             bottom: 10%;
             right: 10%;
+            overflow: hidden;
+
+        i 
+        {
             font-size: 1.5em;
+            position: absolute;
+            top: 0px;
+            left: 50%;
+            transform: translateX(-50%);
         }
+
+        .coeur1
+        {
+            transition: 300ms ease-in-out;
+        }
+
+        .coeur2
+        {
+            color: $color-secondaire;
+            opacity: 0;
+            transition: 500ms ease-in-out;
+        }
+
+        &:hover .coeur1
+        {
+            opacity: 0;
+        }
+
+        &:hover .coeur2
+        {
+            opacity: 1;
+        }
+
+        }
+
+        
     }
 
     img 
