@@ -74,21 +74,9 @@ $dev-blue :#00FFFF;
     }
 }
 
-@mixin menu-animation {
-    
-}
-
 /*typo*/
 @mixin typo-titre {
-    
-}
-
-@mixin typo-titre-corps {
-    
-}
-
-@mixin typo-corps {
-    
+    font-family: 'Shrikhand', cursive;
 }
 
 /*footer*/

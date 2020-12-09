@@ -58,30 +58,18 @@ main {
   position: relative;
 }
 
-main img {
+main div {
+  width: 100%;
+  position: relative;
+}
+
+main div img {
   width: 100%;
   height: auto;
+  position: relative;
 }
 
-main .menu {
-  background-color: #f6f6f6;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
-  -ms-grid-rows: auto;
-      grid-template-rows: auto;
-  row-gap: 15px;
-  border-radius: 25px 25px 0px 0px;
-}
-
-main .menu .titre, main .menu .titre-block, main .menu .boite-plat {
-  width: 90%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-main .menu .titre {
+main div .titre {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -96,13 +84,42 @@ main .menu .titre {
       -ms-flex-pack: start;
           justify-content: flex-start;
   padding: 30px 0px 0px 0px;
-  position: relative;
+  position: absolute;
+  z-index: 1;
+  bottom: 0px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 25px 25px 0px 0px;
+  background-color: #f6f6f6;
+  font-family: 'Shrikhand', cursive;
 }
 
-main .menu .titre i {
+main div .titre h2 {
+  margin-left: 25px;
+}
+
+main div .titre i {
   font-size: 1.5em;
   position: absolute;
-  right: 0px;
+  right: 25px;
+}
+
+main .menu {
+  background-color: #f6f6f6;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+  row-gap: 15px;
+}
+
+main .menu .titre-block, main .menu .boite-plat {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 main .menu .titre-block {
@@ -121,17 +138,41 @@ main .menu .boite-plat {
   border-radius: 15px;
   -webkit-box-shadow: 0px 5px 8px #cfcfcf;
           box-shadow: 0px 5px 8px #cfcfcf;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  overflow: hidden;
 }
 
-main .menu .boite-plat h3 {
+main .menu .boite-plat .invalid {
+  width: 100%;
+  -webkit-transition: 700ms ease-in-out;
+  transition: 700ms ease-in-out;
+}
+
+main .menu .boite-plat .invalid h3 {
   padding-top: 10px;
 }
 
-main .menu .boite-plat p {
+main .menu .boite-plat .invalid p {
   padding-bottom: 10px;
 }
 
-main .menu .boite-plat div {
+main .menu .boite-plat .invalid .modifier {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+main .menu .boite-plat .invalid div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -147,10 +188,60 @@ main .menu .boite-plat div {
           align-items: center;
 }
 
-main .menu .boite-plat h3, main .menu .boite-plat div {
+main .menu .boite-plat .invalid h3, main .menu .boite-plat .invalid div {
   width: 90%;
   margin-right: auto;
   margin-left: auto;
+}
+
+main .menu .boite-plat .invalid:hover {
+  width: 80%;
+}
+
+main .menu .boite-plat .invalid:hover + .valid {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+main .menu .boite-plat .invalid:hover + .valid i {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
+main .menu .boite-plat .valid {
+  background-color: #99E2D0;
+  height: 100%;
+  width: 20%;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transform-origin: center right;
+          transform-origin: center right;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  border-radius: 0px 15px 15px 0px;
+  -webkit-transition: 700ms ease-in-out;
+  transition: 700ms ease-in-out;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .menu .boite-plat .valid i {
+  color: white;
+  font-size: 1.7em;
+  -webkit-transition: 750ms ease-in-out;
+  transition: 750ms ease-in-out;
 }
 
 main .menu button {
