@@ -1,59 +1,28 @@
 /*reset of defaults style*/
-h1, h2, h3, h4, h5, h6, body, p
-{
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+body,
+p {
     margin: 0px;
 }
 
 /*importation des variables*/
-@import "variable";
+@import "until";
 
-body
-{
+body {
     width: 100vw;
     height: auto;
     font-family: 'Roboto', sans-serif;
 }
 
-@keyframes spinner {
+/*animation*/
+@include index-animation;
 
-    0%
-    {
-        transform: scale(0);
-        opacity: 0;
-        z-index: 2;
-    }
-
-    50%
-    {
-        transform: scale(1);
-        opacity: 1;
-    }
-
-    100%
-    {
-        transform: scale(0);
-        opacity: 0;
-        z-index: -999;
-    }
-}
-
-@keyframes fond-spinner
-{
-    0%
-    {
-        opacity: 1;
-        z-index: 1;
-    }
-
-    100%
-    {
-        opacity: 0;
-        z-index: -1;
-    }
-}
-
-.fond-spinner
-{
+.fond-spinner {
     background-color: white;
     width: 100%;
     height: 100%;
@@ -63,10 +32,9 @@ body
     z-index: 1;
     animation: fond-spinner 800ms ease-in-out both;
     animation-delay: 3100ms;
-    
 
-    .spinner
-    {
+
+    .spinner {
         width: 50px;
         height: 50px;
         display: grid;
@@ -78,8 +46,7 @@ body
         transform: translateX(-50%) translateY(-50%);
         z-index: 2;
 
-        i 
-        {
+        i {
             width: 100%;
             height: 100%;
             grid-column-start: 1;
@@ -91,22 +58,19 @@ body
             font-size: 50px;
         }
 
-        .icon1
-        {
+        .icon1 {
             animation: spinner 1000ms ease-in-out both;
             animation-delay: 0ms;
             color: $color-primaire;
         }
 
-        .icon2
-        {
+        .icon2 {
             animation: spinner 1000ms ease-in-out both;
             animation-delay: 1000ms;
             color: $color-secondaire;
         }
 
-        .icon3
-        {
+        .icon3 {
             animation: spinner 1000ms ease-in-out both;
             animation-delay: 2000ms;
             color: $color-primaire;
@@ -115,8 +79,7 @@ body
 }
 
 /*header settings*/
-header
-{
+header {
     width: 100%;
     height: auto;
     background-color: $color-header;
@@ -127,8 +90,7 @@ header
     text-align: center;
 
     /*button settings*/
-    button
-    {
+    button {
         width: 60%;
         margin-top: 30px;
         padding: 15px;
@@ -141,16 +103,14 @@ header
         margin-bottom: 40px;
         transition: 300ms ease-in-out;
 
-        &:hover
-        {
-           filter: brightness(1.2);
+        &:hover {
+            filter: brightness(1.2);
         }
     }
 }
 
 /*logo setting*/
-.logobox
-{
+.logobox {
     width: 100%;
     height: auto;
     background-color: white;
@@ -159,8 +119,7 @@ header
     justify-content: center;
     align-items: center;
 
-    &-logo
-    {
+    &-logo {
         padding: 15px 0px;
     }
 }
@@ -168,8 +127,7 @@ header
 
 
 /*locate box settings*/
-.locatebox
-{
+.locatebox {
     width: 100%;
     height: auto;
     background-color: $locate-color;
@@ -180,14 +138,12 @@ header
     box-shadow: inset 0em 0.3em 5px $shadow-color;
     position: relative;
 
-    i
-    {
+    i {
         position: absolute;
         left: 25%;
     }
 
-    p
-    {
+    p {
         font-size: 1.25em;
         font-weight: 500;
         padding: 15px 0px;
@@ -195,38 +151,33 @@ header
 }
 
 /* title and description*/
-header h1
-{
+header h1 {
     margin-top: 30px;
     font-size: 1.5em;
     font-weight: 700;
 }
 
-header h2
-{
+header h2 {
     margin-top: 10px;
     font-size: 1em;
     font-weight: 300;
 }
 
-.fonctionnement
-{
+.fonctionnement {
     width: 100%;
     height: auto;
     display: grid;
     grid-template-rows: repeat(4, 1fr);
     row-gap: 15px;
 
-    h3 
-    {
+    h3 {
         display: flex;
         flex-direction: row;
         align-items: center;
         margin-left: 10%;
     }
 
-    .carte
-    {
+    .carte {
         margin-left: auto;
         margin-right: auto;
         display: flex;
@@ -243,8 +194,7 @@ header h2
         grid-template-columns: repeat(7, 1fr);
         box-shadow: 0px 2px 8px $shadow-color;
 
-        &-chiffre
-        {
+        &-chiffre {
             position: absolute;
             left: -4%;
             background-color: $color-primaire;
@@ -253,8 +203,7 @@ header h2
             color: white;
         }
 
-        &-icon
-        {
+        &-icon {
             grid-column-start: 2;
             display: flex;
             flex-direction: row;
@@ -262,20 +211,17 @@ header h2
             font-size: 1.25em;
             color: gray;
 
-            &--modifier
-            {
+            &--modifier {
                 color: $color-primaire;
             }
         }
 
-        &-text 
-        {
+        &-text {
             grid-column-start: 3;
             grid-column-end: 8;
         }
 
-        &--modifier
-        {
+        &--modifier {
             background-color: $locate-color;
         }
     }
@@ -283,8 +229,7 @@ header h2
 
 }
 
-.restaurant
-{
+.restaurant {
     width: 100%;
     height: auto;
     background-color: $locate-color;
@@ -294,8 +239,12 @@ header h2
     row-gap: 30px;
     column-gap: 30px;
 
-    h3 
-    {
+    a {
+        color: black;
+        text-decoration: none;
+    }
+
+    h3 {
         display: flex;
         flex-direction: row;
         align-items: flex-end;
@@ -303,8 +252,7 @@ header h2
         font-size: 1.5em;
     }
 
-    .menu
-    {
+    .menu {
         background-color: white;
         position: relative;
         width: 90%;
@@ -314,8 +262,7 @@ header h2
         border-radius: 15px;
         box-shadow: 0px 2px 8px $shadow-color;
 
-        &-nouveau
-        {
+        &-nouveau {
             position: absolute;
             top: 5%;
             right: 10%;
@@ -326,71 +273,62 @@ header h2
             font-weight: bold;
         }
 
-        &-lieu, h3 
-        {
+        &-lieu,
+        h3 {
             margin-left: 20px;
         }
 
-        &-lieu
-        {
+        &-lieu {
             margin-top: 5px;
             margin-bottom: 15px;
             font-size: 1.25em;
         }
 
-        h3 
-        {
+        h3 {
             margin-top: 15px;
             font-size: 1.25em;
         }
 
-        div
-        {
+        div {
             width: 30px;
-            height:24px;
+            height: 24px;
             position: absolute;
             bottom: 10%;
             right: 10%;
             overflow: hidden;
 
-        i 
-        {
-            font-size: 1.5em;
-            position: absolute;
-            top: 0px;
-            left: 50%;
-            transform: translateX(-50%);
-        }
+            i {
+                font-size: 1.5em;
+                position: absolute;
+                top: 0px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
 
-        .coeur1
-        {
-            transition: 300ms ease-in-out;
-        }
+            .coeur1 {
+                transition: 300ms ease-in-out;
+            }
 
-        .coeur2
-        {
-            color: $color-secondaire;
-            opacity: 0;
-            transition: 500ms ease-in-out;
-        }
+            .coeur2 {
+                color: $color-secondaire;
+                opacity: 0;
+                transition: 500ms ease-in-out;
+            }
 
-        &:hover .coeur1
-        {
-            opacity: 0;
-        }
+            &:hover .coeur1 {
+                opacity: 0;
+            }
 
-        &:hover .coeur2
-        {
-            opacity: 1;
-        }
+            &:hover .coeur2 {
+                opacity: 1;
+            }
 
         }
 
-        
+
     }
 
-    img 
-    {
+    img {
         width: 100%;
         height: 180px;
         object-fit: cover;
@@ -398,56 +336,5 @@ header h2
     }
 }
 
-footer
-{
-    width: 100%;
-    height: auto;
-    background-color: $footer-color;
-    display: grid;
-    grid-template-rows: 80px 1fr 1fr 1fr 1fr 40px;
-    row-gap: 10px;
-    align-items: center;
-
-    a 
-    {
-        text-decoration: none;
-        color: white;
-        font-size: 1.2em;
-    }
-
-    i 
-    {
-        color: white;
-    }
-
-    img 
-    {
-        width: 35%;
-        height: auto;
-        filter: invert(100%);
-        margin-left: 20px;
-    }
-
-    &-block
-    {
-        display: flex;
-        flex-direction: row;
-    }
-
-    .icon1
-    {
-        margin-right: 7px;
-        margin-left: 20px;
-    }
-
-    .icon2
-    {
-        margin-left: 20px;
-    }
-
-    .lien
-    {
-        margin-left: 20px;
-    }
-}
-
+/*footer*/
+@include footer;

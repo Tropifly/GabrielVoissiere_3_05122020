@@ -1,17 +1,27 @@
 /*reset of defaults style*/
-h1, h2, h3, h4, h5, h6, body, p {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+body,
+p {
   margin: 0px;
 }
 
 /*importation des variables*/
-/*web site colors*/
-/*dev colors*/
+/*colors*/
+/*animation*/
+/*typo*/
+/*footer*/
 body {
   width: 100vw;
   height: auto;
   font-family: 'Roboto', sans-serif;
 }
 
+/*animation*/
 @-webkit-keyframes spinner {
   0% {
     -webkit-transform: scale(0);
@@ -31,7 +41,6 @@ body {
     z-index: -999;
   }
 }
-
 @keyframes spinner {
   0% {
     -webkit-transform: scale(0);
@@ -373,6 +382,11 @@ header h2 {
           column-gap: 30px;
 }
 
+.restaurant a {
+  color: black;
+  text-decoration: none;
+}
+
 .restaurant h3 {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -411,7 +425,8 @@ header h2 {
   font-weight: bold;
 }
 
-.restaurant .menu-lieu, .restaurant .menu h3 {
+.restaurant .menu-lieu,
+.restaurant .menu h3 {
   margin-left: 20px;
 }
 
@@ -472,6 +487,7 @@ header h2 {
   border-radius: 15px 15px 0px 0px;
 }
 
+/*footer*/
 footer {
   width: 100%;
   height: auto;
