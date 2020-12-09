@@ -1,0 +1,236 @@
+/*importation de until*/
+/*general-settings*/
+/*colors*/
+/*animation*/
+/*typo*/
+/*footer*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+body,
+p {
+  margin: 0px;
+}
+
+body {
+  width: 100vw;
+  height: auto;
+  font-family: 'Roboto', sans-serif;
+}
+
+header {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+}
+
+header .logo {
+  padding: 15px 0px;
+}
+
+header a {
+  position: absolute;
+  left: 5%;
+  color: black;
+}
+
+header i {
+  font-size: 1.2em;
+}
+
+main {
+  position: relative;
+}
+
+main img {
+  width: 100%;
+  height: auto;
+}
+
+main .menu {
+  background-color: #f6f6f6;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+  row-gap: 15px;
+  border-radius: 25px 25px 0px 0px;
+}
+
+main .menu .titre, main .menu .titre-block, main .menu .boite-plat {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+main .menu .titre {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding: 30px 0px 0px 0px;
+  position: relative;
+}
+
+main .menu .titre i {
+  font-size: 1.5em;
+  position: absolute;
+  right: 0px;
+}
+
+main .menu .titre-block {
+  padding: 5px 0px;
+  margin-top: 25px;
+}
+
+main .menu .titre-block .ligne {
+  width: 20%;
+  height: 3px;
+  background-color: #99E2D0;
+}
+
+main .menu .boite-plat {
+  background-color: white;
+  border-radius: 15px;
+  -webkit-box-shadow: 0px 5px 8px #cfcfcf;
+          box-shadow: 0px 5px 8px #cfcfcf;
+}
+
+main .menu .boite-plat h3 {
+  padding-top: 10px;
+}
+
+main .menu .boite-plat p {
+  padding-bottom: 10px;
+}
+
+main .menu .boite-plat div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .menu .boite-plat h3, main .menu .boite-plat div {
+  width: 90%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+main .menu button {
+  width: 60%;
+  margin-top: 30px;
+  margin-bottom: 70px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 15px;
+  border: none;
+  border-radius: 100px;
+  background: -webkit-gradient(linear, left top, right bottom, from(#FF79DA), to(#9356DC));
+  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  color: white;
+  font-weight: 700;
+  outline: none;
+  -webkit-transition: 300ms ease-in-out;
+  transition: 300ms ease-in-out;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .menu button:hover {
+  -webkit-filter: brightness(1.2);
+          filter: brightness(1.2);
+}
+
+footer {
+  width: 100%;
+  height: auto;
+  background-color: #3d3a3a;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 80px 1fr 1fr 1fr 1fr 40px;
+      grid-template-rows: 80px 1fr 1fr 1fr 1fr 40px;
+  row-gap: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.2em;
+}
+
+footer i {
+  color: white;
+}
+
+footer img {
+  width: 35%;
+  height: auto;
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
+  margin-left: 20px;
+}
+
+footer-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+footer .icon1 {
+  margin-right: 7px;
+  margin-left: 20px;
+}
+
+footer .icon2 {
+  margin-left: 20px;
+}
+
+footer .lien {
+  margin-left: 20px;
+}
+/*# sourceMappingURL=menu.css.map */

@@ -1,3 +1,22 @@
+/*general-settings*/
+@mixin general-settings {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    body,
+    p {
+        margin: 0px;
+    }
+
+    body {
+        width: 100vw;
+        height: auto;
+        font-family: 'Roboto', sans-serif;
+    }
+}
 /*colors*/
 
 $color-primaire : #9356DC;

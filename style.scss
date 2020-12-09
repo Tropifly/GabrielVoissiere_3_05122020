@@ -1,23 +1,7 @@
-/*reset of defaults style*/
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-body,
-p {
-    margin: 0px;
-}
-
-/*importation des variables*/
+/*importation de until*/
 @import "until";
 
-body {
-    width: 100vw;
-    height: auto;
-    font-family: 'Roboto', sans-serif;
-}
+@include general-settings;
 
 /*animation*/
 @include index-animation;

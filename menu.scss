@@ -1,0 +1,145 @@
+/*importation de until*/
+@import "until";
+
+@include general-settings;
+
+header
+{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    .logo
+    {
+        padding: 15px 0px;
+    }
+
+    a 
+    {
+        position: absolute;
+        left: 5%;
+        color: black;
+    }
+
+    i 
+    {
+        font-size: 1.2em;
+    }
+}
+
+main
+{
+    position: relative;
+
+    img 
+    {
+        width: 100%;
+        height: auto;
+    }
+
+    .menu
+    {
+        background-color: $color-header;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        row-gap: 15px;
+        border-radius: 25px 25px 0px 0px;
+
+        .titre, .titre-block, .boite-plat 
+        {
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .titre 
+        {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 30px 0px 0px 0px;
+            position: relative;
+
+            i 
+            {
+                font-size: 1.5em;
+                position: absolute;
+                right: 0px;
+            }
+        }
+
+        .titre-block
+        {
+            padding: 5px 0px;
+            margin-top: 25px;
+
+            .ligne
+            {
+                width: 20%;
+                height: 3px;
+                background-color:$color-tertiaire;
+            }
+        }
+        
+        .boite-plat
+        {
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0px 5px 8px $shadow-color;
+
+            h3
+            {
+                padding-top: 10px;
+            }
+
+            p
+            {
+                padding-bottom: 10px;
+            }
+
+            div
+            {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            h3, div
+            {
+                width: 90%;
+                margin-right: auto;
+                margin-left: auto;
+            }
+        }
+
+        button {
+            width: 60%;
+            margin-top: 30px;
+            margin-bottom: 70px;
+            margin-right: auto;
+            margin-left: auto;
+            padding: 15px;
+            border: none;
+            border-radius: 100px;
+            background: linear-gradient(to bottom right, $color-secondaire, $color-primaire);
+            color: white;
+            font-weight: 700;
+            outline: none;
+            transition: 300ms ease-in-out;
+            align-items: center;
+    
+            &:hover {
+                filter: brightness(1.2);
+            }
+        }
+    }
+}
+
+@include footer;

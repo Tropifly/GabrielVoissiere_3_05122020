@@ -1,4 +1,9 @@
-/*reset of defaults style*/
+/*importation de until*/
+/*general-settings*/
+/*colors*/
+/*animation*/
+/*typo*/
+/*footer*/
 h1,
 h2,
 h3,
@@ -10,11 +15,6 @@ p {
   margin: 0px;
 }
 
-/*importation des variables*/
-/*colors*/
-/*animation*/
-/*typo*/
-/*footer*/
 body {
   width: 100vw;
   height: auto;
