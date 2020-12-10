@@ -206,7 +206,7 @@ header h2 {
         }
 
         &--modifier {
-            background-color: $locate-color;
+            background-color: lighten($color: $color-primaire, $amount: 35);
         }
     }
 
@@ -258,7 +258,7 @@ header h2 {
         }
 
         &-lieu,
-        h3 {
+        h4 {
             margin-left: 20px;
         }
 
@@ -268,7 +268,7 @@ header h2 {
             font-size: 1.25em;
         }
 
-        h3 {
+        h4 {
             margin-top: 15px;
             font-size: 1.25em;
         }
@@ -294,7 +294,7 @@ header h2 {
             }
 
             .coeur2 {
-                color: $color-secondaire;
+                color: $color-primaire;
                 opacity: 0;
                 transition: 500ms ease-in-out;
             }

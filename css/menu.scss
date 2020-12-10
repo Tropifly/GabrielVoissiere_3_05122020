@@ -2,6 +2,7 @@
 @import "until";
 
 @include general-settings;
+@include plat-animation;
 
 header
 {
@@ -43,7 +44,8 @@ main
         img 
         {
             width: 100%;
-            height: auto;
+            height: 250px;
+            object-fit: cover;
             position: relative;
         }
 
@@ -65,16 +67,46 @@ main
                 
                 @include typo-titre;
 
-                h2 
+                h1 
                 {
                     margin-left: 25px;
+                    font-size: 1.5em;
                 }
 
-                i 
-                {
-                    font-size: 1.5em;
+                div {
+                    width: 30px;
+                    height: 24px;
                     position: absolute;
+                    bottom: 10%;
                     right: 25px;
+                    overflow: hidden;
+        
+                    i {
+                        font-size: 1.5em;
+                        position: absolute;
+                        top: 0px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                    }
+        
+                    .coeur1 {
+                        transition: 300ms ease-in-out;
+                    }
+        
+                    .coeur2 {
+                        color: $color-primaire;
+                        opacity: 0;
+                        transition: 500ms ease-in-out;
+                    }
+        
+                    &:hover .coeur1 {
+                        opacity: 0;
+                    }
+        
+                    &:hover .coeur2 {
+                        opacity: 1;
+                    }
+        
                 }
             }
     }
@@ -119,6 +151,7 @@ main
             flex-direction: row;
             justify-content: space-between;
             overflow: hidden;
+            animation: apparition 800ms ease-in-out both;
 
             .invalid
             {
