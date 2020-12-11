@@ -223,6 +223,9 @@ main .menu .boite-plat .invalid {
 
 main .menu .boite-plat .invalid h3 {
   padding-top: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 main .menu .boite-plat .invalid p {
@@ -249,6 +252,14 @@ main .menu .boite-plat .invalid div {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+main .menu .boite-plat .invalid div p:first-child {
+  font-size: 0.9em;
+}
+
+main .menu .boite-plat .invalid div p:last-child {
+  font-weight: bold;
 }
 
 main .menu .boite-plat .invalid h3, main .menu .boite-plat .invalid div {

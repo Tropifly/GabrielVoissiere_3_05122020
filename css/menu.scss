@@ -161,6 +161,9 @@ main
                 h3
                 {
                     padding-top: 10px;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
                 }
 
                 p
@@ -181,6 +184,16 @@ main
                     flex-direction: row;
                     justify-content: space-between;
                     align-items: center;
+
+                    p:first-child
+                    {
+                        font-size: 0.9em;
+                    }
+
+                    p:last-child
+                    {
+                        font-weight: bold;
+                    }
                 }
 
                 h3, div
