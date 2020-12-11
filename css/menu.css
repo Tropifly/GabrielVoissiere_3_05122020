@@ -1,9 +1,14 @@
 /*importation de until*/
 /*general-settings*/
 /*colors*/
+/*breakpoints*/
 /*animation*/
 /*typo*/
 /*footer*/
+::-webkit-scrollbar {
+  display: none;
+}
+
 h1,
 h2,
 h3,
@@ -19,6 +24,7 @@ body {
   width: 100vw;
   height: auto;
   font-family: 'Roboto', sans-serif;
+  background-color: #f6f6f6;
 }
 
 @-webkit-keyframes apparition {
@@ -84,6 +90,17 @@ main {
   position: relative;
 }
 
+@media screen and (min-width: 900px) {
+  main {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 400px auto;
+        grid-template-rows: 400px auto;
+  }
+}
+
 main div {
   width: 100%;
   position: relative;
@@ -95,6 +112,12 @@ main div img {
   -o-object-fit: cover;
      object-fit: cover;
   position: relative;
+}
+
+@media screen and (min-width: 900px) {
+  main div img {
+    height: 100%;
+  }
 }
 
 main div .titre {
@@ -168,6 +191,24 @@ main div .titre div:hover .coeur2 {
 
 main .menu {
   background-color: #f6f6f6;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+  row-gap: 15px;
+}
+
+@media screen and (min-width: 900px) {
+  main .menu {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+    height: 100%;
+  }
+}
+
+main .menu div {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr;
@@ -339,6 +380,13 @@ main .menu button {
           align-items: center;
 }
 
+@media screen and (min-width: 900px) {
+  main .menu button {
+    -ms-grid-column: 2;
+        grid-column-start: 2;
+  }
+}
+
 main .menu button:hover {
   -webkit-filter: brightness(1.2);
           filter: brightness(1.2);
@@ -358,6 +406,19 @@ footer {
           align-items: center;
 }
 
+@media screen and (min-width: 900px) {
+  footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    padding: 25px 0px;
+    /*position: absolute;
+            bottom: 0px;*/
+  }
+}
+
 footer a {
   text-decoration: none;
   color: white;
@@ -369,7 +430,7 @@ footer i {
 }
 
 footer img {
-  width: 35%;
+  width: 200px;
   height: auto;
   -webkit-filter: invert(100%);
           filter: invert(100%);

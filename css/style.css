@@ -1,9 +1,14 @@
 /*importation de until*/
 /*general-settings*/
 /*colors*/
+/*breakpoints*/
 /*animation*/
 /*typo*/
 /*footer*/
+::-webkit-scrollbar {
+  display: none;
+}
+
 h1,
 h2,
 h3,
@@ -19,6 +24,7 @@ body {
   width: 100vw;
   height: auto;
   font-family: 'Roboto', sans-serif;
+  background-color: #f6f6f6;
 }
 
 /*animation*/
@@ -199,6 +205,13 @@ header button {
   transition: 300ms ease-in-out;
 }
 
+@media screen and (min-width: 900px) {
+  header button {
+    width: 30%;
+    font-size: 1.2em;
+  }
+}
+
 header button:hover {
   -webkit-filter: brightness(1.2);
           filter: brightness(1.2);
@@ -256,6 +269,13 @@ header button:hover {
   left: 25%;
 }
 
+@media screen and (min-width: 900px) {
+  .locatebox i {
+    position: static;
+    margin-right: 20px;
+  }
+}
+
 .locatebox p {
   font-size: 1.25em;
   font-weight: 500;
@@ -269,10 +289,22 @@ header h1 {
   font-weight: 700;
 }
 
+@media screen and (min-width: 900px) {
+  header h1 {
+    font-size: 2.5em;
+  }
+}
+
 header h2 {
   margin-top: 10px;
   font-size: 1em;
   font-weight: 300;
+}
+
+@media screen and (min-width: 900px) {
+  header h2 {
+    font-size: 2em;
+  }
 }
 
 .fonctionnement {
@@ -283,6 +315,15 @@ header h2 {
   -ms-grid-rows: (1fr)[4];
       grid-template-rows: repeat(4, 1fr);
   row-gap: 15px;
+}
+
+@media screen and (min-width: 900px) {
+  .fonctionnement {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+    -ms-grid-rows: (1fr)[2];
+        grid-template-rows: repeat(2, 1fr);
+  }
 }
 
 .fonctionnement h3 {
@@ -297,6 +338,18 @@ header h2 {
       -ms-flex-align: center;
           align-items: center;
   margin-left: 10%;
+}
+
+@media screen and (min-width: 900px) {
+  .fonctionnement h3 {
+    -ms-grid-column: 2;
+        grid-column-start: 2;
+    margin: 0px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    font-size: 1.8em;
+  }
 }
 
 .fonctionnement .carte {
@@ -326,6 +379,14 @@ header h2 {
       grid-template-columns: repeat(7, 1fr);
   -webkit-box-shadow: 0px 2px 8px #cfcfcf;
           box-shadow: 0px 2px 8px #cfcfcf;
+}
+
+@media screen and (min-width: 900px) {
+  .fonctionnement .carte {
+    -ms-grid-row: 2;
+        grid-row-start: 2;
+    margin-bottom: 50px;
+  }
 }
 
 .fonctionnement .carte-chiffre {
@@ -502,6 +563,19 @@ footer {
           align-items: center;
 }
 
+@media screen and (min-width: 900px) {
+  footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    padding: 25px 0px;
+    /*position: absolute;
+            bottom: 0px;*/
+  }
+}
+
 footer a {
   text-decoration: none;
   color: white;
@@ -513,7 +587,7 @@ footer i {
 }
 
 footer img {
-  width: 35%;
+  width: 200px;
   height: auto;
   -webkit-filter: invert(100%);
           filter: invert(100%);

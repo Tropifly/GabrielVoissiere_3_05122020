@@ -1,5 +1,11 @@
 /*general-settings*/
 @mixin general-settings {
+
+    ::-webkit-scrollbar
+    {
+        display: none;
+    }
+
     h1,
     h2,
     h3,
@@ -15,8 +21,10 @@
         width: 100vw;
         height: auto;
         font-family: 'Roboto', sans-serif;
+        background-color: $color-header;
     }
 }
+
 /*colors*/
 
 $color-primaire : #9356DC;
@@ -29,7 +37,10 @@ $locate-color : #eaeaea;
 $footer-color : #3d3a3a;
 
 $dev-red : #ff0000;
-$dev-blue :#00FFFF; 
+$dev-blue :#00FFFF;
+
+/*breakpoints*/
+$breakpoint : 900px;
 
 
 /*animation*/
@@ -37,37 +48,31 @@ $dev-blue :#00FFFF;
 
     @keyframes spinner {
 
-        0%
-        {
+        0% {
             transform: scale(0);
             opacity: 0;
             z-index: 2;
         }
-    
-        50%
-        {
+
+        50% {
             transform: scale(1);
             opacity: 1;
         }
-    
-        100%
-        {
+
+        100% {
             transform: scale(0);
             opacity: 0;
             z-index: -999;
         }
     }
-    
-    @keyframes fond-spinner
-    {
-        0%
-        {
+
+    @keyframes fond-spinner {
+        0% {
             opacity: 1;
             z-index: 1;
         }
-    
-        100%
-        {
+
+        100% {
             opacity: 0;
             z-index: -1;
         }
@@ -75,17 +80,15 @@ $dev-blue :#00FFFF;
 }
 
 @mixin plat-animation {
-    
+
     @keyframes apparition {
-        
-        0%
-        {
+
+        0% {
             opacity: 0;
             transform: translateY(50px);
         }
 
-        100%
-        {
+        100% {
             opacity: 1;
             transform: translateY(0);
         }
@@ -100,58 +103,56 @@ $dev-blue :#00FFFF;
 /*footer*/
 @mixin footer {
 
-    footer
-{
-    width: 100%;
-    height: auto;
-    background-color: $footer-color;
-    display: grid;
-    grid-template-rows: 80px 1fr 1fr 1fr 1fr 40px;
-    row-gap: 10px;
-    align-items: center;
-
-    a 
-    {
-        text-decoration: none;
-        color: white;
-        font-size: 1.2em;
-    }
-
-    i 
-    {
-        color: white;
-    }
-
-    img 
-    {
-        width: 35%;
+    footer {
+        width: 100%;
         height: auto;
-        filter: invert(100%);
-        margin-left: 20px;
+        background-color: $footer-color;
+        display: grid;
+        grid-template-rows: 80px 1fr 1fr 1fr 1fr 40px;
+        row-gap: 10px;
+        align-items: center;
+
+        @media screen and (min-width: $breakpoint) {
+            display: flex;
+            justify-content: space-around;
+            padding: 25px 0px;
+            /*position: absolute;
+            bottom: 0px;*/
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.2em;
+        }
+
+        i {
+            color: white;
+        }
+
+        img {
+            width: 200px;
+            height: auto;
+            filter: invert(100%);
+            margin-left: 20px;
+        }
+
+        &-block {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .icon1 {
+            margin-right: 7px;
+            margin-left: 20px;
+        }
+
+        .icon2 {
+            margin-left: 20px;
+        }
+
+        .lien {
+            margin-left: 20px;
+        }
     }
-
-    &-block
-    {
-        display: flex;
-        flex-direction: row;
-    }
-
-    .icon1
-    {
-        margin-right: 7px;
-        margin-left: 20px;
-    }
-
-    .icon2
-    {
-        margin-left: 20px;
-    }
-
-    .lien
-    {
-        margin-left: 20px;
-    }
-}
-
-
 }

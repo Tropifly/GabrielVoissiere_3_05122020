@@ -87,6 +87,11 @@ header {
         margin-bottom: 40px;
         transition: 300ms ease-in-out;
 
+        @media screen and (min-width: $breakpoint) {
+            width: 30%;
+            font-size: 1.2em;
+        }
+
         &:hover {
             filter: brightness(1.2);
         }
@@ -125,6 +130,11 @@ header {
     i {
         position: absolute;
         left: 25%;
+
+        @media screen and (min-width: $breakpoint) {
+            position: static;
+            margin-right: 20px;
+        }
     }
 
     p {
@@ -139,12 +149,20 @@ header h1 {
     margin-top: 30px;
     font-size: 1.5em;
     font-weight: 700;
+
+    @media screen and (min-width: $breakpoint) {
+        font-size: 2.5em;
+    }
 }
 
 header h2 {
     margin-top: 10px;
     font-size: 1em;
     font-weight: 300;
+
+    @media screen and (min-width: $breakpoint) {
+        font-size: 2em;
+    }
 }
 
 .fonctionnement {
@@ -154,11 +172,23 @@ header h2 {
     grid-template-rows: repeat(4, 1fr);
     row-gap: 15px;
 
+    @media screen and (min-width: $breakpoint) {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+
     h3 {
         display: flex;
         flex-direction: row;
         align-items: center;
         margin-left: 10%;
+
+        @media screen and (min-width: $breakpoint) {
+            grid-column-start: 2;
+            margin: 0px;
+            justify-content: center;
+            font-size: 1.8em;
+        }
     }
 
     .carte {
@@ -177,6 +207,11 @@ header h2 {
         display: grid;
         grid-template-columns: repeat(7, 1fr);
         box-shadow: 0px 2px 8px $shadow-color;
+
+        @media screen and (min-width: $breakpoint) {
+            grid-row-start: 2;
+            margin-bottom: 50px;
+        }
 
         &-chiffre {
             position: absolute;

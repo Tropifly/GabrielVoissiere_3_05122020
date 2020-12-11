@@ -36,6 +36,12 @@ main
 {
     position: relative;
 
+    @media screen and (min-width: $breakpoint) {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 400px auto;
+    }
+
     div
     {
         width: 100%;
@@ -47,6 +53,10 @@ main
             height: 250px;
             object-fit: cover;
             position: relative;
+
+            @media screen and (min-width: $breakpoint) {
+                height: 100%;
+            }
         }
 
         .titre 
@@ -118,6 +128,19 @@ main
         grid-template-columns: 1fr;
         grid-template-rows: auto;
         row-gap: 15px;
+
+        @media screen and (min-width: $breakpoint){
+            grid-template-columns: repeat(3, 1fr);
+            height: 100%;
+        }
+
+        div
+        {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: auto;
+            row-gap: 15px;
+        }
 
         .titre-block, .boite-plat 
         {
@@ -261,6 +284,10 @@ main
             outline: none;
             transition: 300ms ease-in-out;
             align-items: center;
+
+            @media screen and (min-width: $breakpoint){
+                    grid-column-start: 2;
+            }
     
             &:hover {
                 filter: brightness(1.2);
