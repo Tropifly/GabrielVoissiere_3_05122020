@@ -1,8 +1,7 @@
 /*general-settings*/
 @mixin general-settings {
 
-    ::-webkit-scrollbar
-    {
+    ::-webkit-scrollbar {
         display: none;
     }
 
@@ -21,27 +20,9 @@
         width: 100vw;
         height: auto;
         font-family: 'Roboto', sans-serif;
-        background-color: $color-header;
+        background-color: $locate-color;
     }
 }
-
-/*colors*/
-
-$color-primaire : #9356DC;
-$color-secondaire : #FF79DA;
-$color-tertiaire : #99E2D0;
-
-$color-header : #f6f6f6;
-$shadow-color : #cfcfcf;
-$locate-color : #eaeaea;
-$footer-color : #3d3a3a;
-
-$dev-red : #ff0000;
-$dev-blue :#00FFFF;
-
-/*breakpoints*/
-$breakpoint : 900px;
-
 
 /*animation*/
 @mixin index-animation {
@@ -100,6 +81,34 @@ $breakpoint : 900px;
     font-family: 'Shrikhand', cursive;
 }
 
+/*header menu*/
+@mixin header-menu {
+
+    header {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+
+        .logo {
+            padding: 15px 0px;
+        }
+
+        a {
+            position: absolute;
+            left: 5%;
+            color: black;
+        }
+
+        i {
+            font-size: 1.2em;
+        }
+    }
+}
+
 /*footer*/
 @mixin footer {
 
@@ -112,7 +121,7 @@ $breakpoint : 900px;
         row-gap: 10px;
         align-items: center;
 
-        @media screen and (min-width: $breakpoint) {
+        @media screen and (min-width: $breakpoint-tablette3) {
             display: flex;
             justify-content: space-around;
             padding: 25px 0px;
@@ -137,18 +146,22 @@ $breakpoint : 900px;
             margin-left: 20px;
         }
 
-        &-block {
+        .footer-block {
             display: flex;
             flex-direction: row;
-        }
 
-        .icon1 {
-            margin-right: 7px;
-            margin-left: 20px;
-        }
+            &-icon1 {
+                margin-right: 7px;
+                margin-left: 20px;
+            }
 
-        .icon2 {
-            margin-left: 20px;
+            &-icon2 {
+                margin-left: 20px;
+            }
+
+            a {
+                margin-left: 10px;
+            }
         }
 
         .lien {
@@ -156,3 +169,26 @@ $breakpoint : 900px;
         }
     }
 }
+
+/*colors*/
+
+$color-primaire : #9356DC;
+$color-secondaire : #FF79DA;
+$color-tertiaire : #99E2D0;
+
+$color-header : #f6f6f6;
+$shadow-color : #cfcfcf;
+$locate-color : #eaeaea;
+$footer-color : #3d3a3a;
+
+$dev-red : #ff0000;
+$dev-blue :#00FFFF;
+
+/*breakpoints*/
+$breakpoint-mobile : 667px;
+
+$breakpoint-tablette1 : 668px;
+$breakpoint-tablette2 : 1024px;
+$breakpoint-tablette3 : 900px;
+
+$breakpoint-laptop : 1025px;
