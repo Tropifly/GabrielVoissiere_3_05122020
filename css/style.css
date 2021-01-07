@@ -320,7 +320,6 @@ header h2 {
   height: auto;
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: (1fr)[4];
       grid-template-rows: repeat(4, 1fr);
   row-gap: 15px;
   background-color: #f6f6f6;
@@ -388,7 +387,6 @@ header h2 {
   position: relative;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[7];
       grid-template-columns: repeat(7, 1fr);
   -webkit-box-shadow: 0px 2px 8px #cfcfcf;
           box-shadow: 0px 2px 8px #cfcfcf;
@@ -464,7 +462,6 @@ header h2 {
 
 @media screen and (min-width: 668px) {
   .restaurant {
-    -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
     -ms-grid-rows: 80px auto;
         grid-template-rows: 80px auto;
@@ -475,7 +472,6 @@ header h2 {
 
 @media screen and (min-width: 1025px) {
   .restaurant {
-    -ms-grid-columns: (1fr)[3];
         grid-template-columns: repeat(3, 1fr);
     -ms-grid-rows: 80px auto;
         grid-template-rows: 80px auto;
